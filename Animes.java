@@ -1,23 +1,23 @@
 package crud;
 
-public class Jogos {
+public class Animes {
 
 	private int Id;
 	private String Nome;
-	private String Plataforma;
+	private int Episodios;
 	private String Genero;
 	
 	public Jogos() {
 		this.Id = -1;
 		this.Nome = "";
-		this.Plataforma = "";
+		this.Episodios = "";
 		this.Genero = "";
 	}
 	
-	public Jogos(int id, String nome, String plataforma, String genero) {
+	public Jogos(int id, String nome, int episodios, String genero) {
 		this.Id = id;
 		this.Nome = nome;
-		this.Plataforma = plataforma ;
+		this.Episodios = episodios ;
 		this.Genero =  genero;
 	}
 	
@@ -38,12 +38,12 @@ public class Jogos {
 		Nome = nome;
 	}
 
-	public String getPlataforma() {
-		return Plataforma;
+	public String getEpisodios() {
+		return Episodios;
 	}
 
-	public void setPlataforma(String plataforma) {
-		Plataforma = plataforma;
+	public void setEpisodios(String episodios) {
+		Episodios = episodios;
 	}
 
 	public String getGenero() {
@@ -56,7 +56,7 @@ public class Jogos {
 
 	@Override
 	public String toString() {
-		return "Jogos [Id=" + Id + ", Nome=" + Nome + ", Plataforma=" + Plataforma + ", Genero=" + Genero + "]";
+		return "Jogos [Id=" + Id + ", Nome=" + Nome + ", Episodios=" + Episodios + ", Genero=" + Genero + "]";
 	}
 
 	
