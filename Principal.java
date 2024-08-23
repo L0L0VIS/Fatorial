@@ -25,40 +25,40 @@ public class Principal {
 
             switch (opcao) {
                 case 1:
-                    List<Jogos> jogos = dao.listar();
-                    for (Jogos jogo : jogos) {
-                        System.out.println(jogo);
+                    List<Animes> animes = dao.listar();
+                    for (Animes anime : animes) {
+                        System.out.println(anime);
                     }
                     break;
                 case 2:
                     System.out.print("Nome: ");
                     String nome = scanner.nextLine();
-                    System.out.print("Plataforma: ");
-                    String plataforma = scanner.nextLine();
+                    System.out.print("Episodios: ");
+                    String episodio = scanner.nextLine();
                     System.out.print("Gênero: ");
                     String genero = scanner.nextLine();
 
-                    Jogos novoJogo = new Jogos(-1, nome, plataforma, genero);
-                    dao.inserir(novoJogo);
+                    Jogos novoSnime = new Animes(-1, nome, episodios, genero);
+                    dao.inserir(novoAnime);
                     break;
                 case 3:
-                    System.out.print("Digite o ID do jogo para excluir: ");
+                    System.out.print("Digite o ID do anime para excluir: ");
                     int idExcluir = scanner.nextInt();
                     dao.excluir(idExcluir);
                     break;
                 case 4:
-                    System.out.print("Digite o ID do jogo para atualizar: ");
+                    System.out.print("Digite o ID do anime para atualizar: ");
                     int idAtualizar = scanner.nextInt();
                     scanner.nextLine(); 
                     System.out.print("Novo Nome: ");
                     String novoNome = scanner.nextLine();
-                    System.out.print("Nova Plataforma: ");
-                    String novaPlataforma = scanner.nextLine();
+                    System.out.print("Novos Episodios: ");
+                    String novosEpisodios = scanner.nextLine();
                     System.out.print("Novo Gênero: ");
                     String novoGenero = scanner.nextLine();
 
-                    Jogos jogoAtualizado = new Jogos(idAtualizar, novoNome, novaPlataforma, novoGenero);
-                    dao.atualizar(jogoAtualizado);
+                    Animes animeAtualizado = new Animes(idAtualizar, novoNome, novosEpisodios, novoGenero);
+                    dao.atualizar(animeAtualizado);
                     break;
                 case 5:
                     System.out.println("Saindo...");
